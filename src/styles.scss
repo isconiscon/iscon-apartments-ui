@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+.main-container {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  height: calc(100% - 60px);
+}
+.admin-body {
+  .main-container {
+    top: 0px !important;
+  }
+}

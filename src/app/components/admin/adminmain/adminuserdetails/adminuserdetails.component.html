@@ -1,0 +1,26 @@
+<form>
+  <div class="form-group">
+    <label for="firstname">Firstname</label>
+    <input
+      type="text"
+      class="form-control"
+      id="firstname"
+      aria-describedby="firstname"
+      placeholder=""
+      [(ngModel)]="userInformation.firstName"
+      name="firstname"
+    />
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone</label>
+    <input
+      type="text"
+      class="form-control"
+      id="phone"
+      placeholder=""
+      name="phone"
+      [(ngModel)]="userInformation.phone"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

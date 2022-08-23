@@ -1,0 +1,137 @@
+{
+  "userDataList": [
+    {
+      "createdOn": "2022-08-13T08:17:14",
+      "createdBy": "UNKNOWN",
+      "updatedOn": null,
+      "updatedBy": null,
+      "idUser": "d4d35f72-34bf-4bdf-b984-77fd3635fdf0",
+      "firstName": "Selva",
+      "middleName": "middle",
+      "lastName": "G",
+      "userName": "Admin15",
+      "password": "$2a$10$cR7XeGNR8J2kCFe2H3vfzezkJYlSZd/b/FHyn3YEQlzXdu7fKsOtS",
+      "email": "selvaranis05@gmail.com",
+      "phone": "9843279698",
+      "role": "Admin",
+      "dob": "05-06-1988",
+      "isFirstLogin": true,
+      "isUserActive": true,
+      "appartments": [
+        {
+          "idApparment": "c8aadc88-bb70-4ee1-8ddc-aa0a8efb546c",
+          "idUser": null,
+          "appartmentName": "Iscon5",
+          "block": null,
+          "squareFeet": 1200,
+          "maintenanceFactor": 3,
+          "noPeople": 5,
+          "totalVehicle": null,
+          "bhk": 3
+        },
+        {
+          "idApparment": "9d3b843f-9dca-477c-89f0-7b099ad0f5bf",
+          "idUser": null,
+          "appartmentName": "Iscon6",
+          "block": null,
+          "squareFeet": 600,
+          "maintenanceFactor": 3,
+          "noPeople": 4,
+          "totalVehicle": null,
+          "bhk": 2
+        }
+      ],
+      "userAddress": [],
+      "vehcles": []
+    },
+    {
+      "createdOn": "2022-08-13T08:17:14",
+      "createdBy": "UNKNOWN",
+      "updatedOn": null,
+      "updatedBy": null,
+      "idUser": "d4d35f72-34bf-4bdf-b984-77fd3635fdf0",
+      "firstName": "Selva Gowri",
+      "middleName": "middle",
+      "lastName": "G",
+      "userName": "Admin1",
+      "password": "$2a$10$cR7XeGNR8J2kCFe2H3vfzezkJYlSZd/b/FHyn3YEQlzXdu7fKsOtS",
+      "email": "selvaranis05@gmail.com",
+      "phone": "0123456789",
+      "role": "Admin",
+      "dob": "05-06-1988",
+      "isFirstLogin": true,
+      "isUserActive": true,
+      "appartments": [
+        {
+          "idApparment": "c8aadc88-bb70-4ee1-8ddc-aa0a8efb546c",
+          "idUser": null,
+          "appartmentName": "Iscon5",
+          "block": null,
+          "squareFeet": 1200,
+          "maintenanceFactor": 3,
+          "noPeople": 5,
+          "totalVehicle": null,
+          "bhk": 3
+        },
+        {
+          "idApparment": "9d3b843f-9dca-477c-89f0-7b099ad0f5bf",
+          "idUser": null,
+          "appartmentName": "Iscon6",
+          "block": null,
+          "squareFeet": 600,
+          "maintenanceFactor": 3,
+          "noPeople": 4,
+          "totalVehicle": null,
+          "bhk": 2
+        }
+      ],
+      "userAddress": [],
+      "vehcles": []
+    },
+    {
+      "createdOn": "2022-08-13T08:17:14",
+      "createdBy": "UNKNOWN",
+      "updatedOn": null,
+      "updatedBy": null,
+      "idUser": "d4d35f72-34bf-4bdf-b984-77fd3635fdf0",
+      "firstName": "Gowri",
+      "middleName": "middle",
+      "lastName": "G",
+      "userName": "Admin10",
+      "password": "$2a$10$cR7XeGNR8J2kCFe2H3vfzezkJYlSZd/b/FHyn3YEQlzXdu7fKsOtS",
+      "email": "selvaranis05@gmail.com",
+      "phone": "987654321",
+      "role": "Admin",
+      "dob": "05-06-1988",
+      "isFirstLogin": true,
+      "isUserActive": true,
+      "appartments": [
+        {
+          "idApparment": "c8aadc88-bb70-4ee1-8ddc-aa0a8efb546c",
+          "idUser": null,
+          "appartmentName": "Iscon5",
+          "block": null,
+          "squareFeet": 1200,
+          "maintenanceFactor": 3,
+          "noPeople": 5,
+          "totalVehicle": null,
+          "bhk": 3
+        },
+        {
+          "idApparment": "9d3b843f-9dca-477c-89f0-7b099ad0f5bf",
+          "idUser": null,
+          "appartmentName": "Iscon6",
+          "block": null,
+          "squareFeet": 600,
+          "maintenanceFactor": 3,
+          "noPeople": 4,
+          "totalVehicle": null,
+          "bhk": 2
+        }
+      ],
+      "userAddress": [],
+      "vehcles": []
+    }
+  ],
+  "totalCount": 1
+}

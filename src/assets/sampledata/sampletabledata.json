@@ -1,0 +1,38 @@
+{
+  "data": [
+    {
+      "userName": "User name1",
+      "firstName": "First name1",
+      "lastName": "Last name1",
+      "email": "abc@gmail.com",
+      "profilePic": "user-dummy",
+      "profileComplete": "yes",
+      "active": "yes",
+      "phone": "9876543219",
+      "country": "india"
+    },
+
+    {
+      "userName": "User name2",
+      "firstName": "First name2",
+      "lastName": "Last name2",
+      "email": "abc@gmail.com",
+      "profilePic": "user-dummy",
+      "profileComplete": "no",
+      "active": "yes",
+      "phone": "9876543219",
+      "country": "india"
+    },
+    {
+      "userName": "User name3",
+      "firstName": "First name3",
+      "lastName": "Last name3",
+      "email": "abc@gmail.com",
+      "profilePic": "user-dummy",
+      "profileComplete": "yes",
+      "active": "no",
+      "phone": "9876543219",
+      "country": "india"
+    }
+  ]
+}

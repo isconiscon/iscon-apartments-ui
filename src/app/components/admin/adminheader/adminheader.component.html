@@ -1,0 +1,48 @@
+<div class="top-header admin-header">
+  <div class="container-fluid bg-light">
+    <div class="row">
+      <div
+        class="col col-xs-3 col-sm-3 col-md-3 col-lg-3 d-flex align-items-center b-right-1"
+      >
+        <a class="navbar-brand" href="javascript:void(0)" (click)="goToHome()">
+          <img
+            src="../../../../assets/images/logo.png"
+            width="50px"
+            height="50px"
+            alt="ISCON"
+            title="ISCON"
+          />
+        </a>
+      </div>
+      <div class="col col-xs-9 col-sm-9 col-md-9 col-lg-9">
+        <div class="d-flex justify-content-end align-items-center">
+          <div class="loggeduser py-1 d-flex">
+            <div ngbDropdown>
+              <button
+                class="btn btn-primary admin-dropdown-button flex-column"
+                id="gfg"
+                ngbDropdownToggle
+              >
+                <!-- Super Admin -->
+                {{ currentUser }}
+                <span class="userimage flex-column">
+                  <img
+                    src="../../../../assets/images/user-dummy.jpg"
+                    alt=""
+                    title=""
+                  />
+                </span>
+              </button>
+
+              <div ngbDropdownMenu="gfg" class="dropdown-menu">
+                <button ngbDropdownItem>Profile</button>
+                <button ngbDropdownItem>Settings</button>
+                <button ngbDropdownItem (click)="logout()">Logout</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

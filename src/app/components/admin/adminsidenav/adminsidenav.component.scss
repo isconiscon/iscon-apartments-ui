@@ -1,0 +1,36 @@
+.admin-sidenav {
+    .nav-tabs {
+      .nav-link {
+        background-color: transparent;
+        border-radius: 0 !important;
+        border: none !important;
+      }
+    }
+    .nav-item {
+      padding-left: calc(var(--bs-gutter-x) * 0.5);
+      padding-right: calc(var(--bs-gutter-x) * 0.5);
+      border-bottom: 2px solid grey;
+    }
+    .dropdown-menu {
+      .nav-item {
+        border-bottom: 0px !important;
+      }
+    }
+    .dropdown-toggle::after {
+      display: none !important;
+    }
+    .dropdown-icon {
+      position: absolute;
+      right: calc(var(--bs-gutter-x) * 0.5);
+      top: 10px;
+      margin: auto;
+    }
+    .dropdown-toggle {
+      &.show {
+        .user-icon {
+          color: red;
+        }
+      }
+    }
+  }
+  
