@@ -20,13 +20,5 @@ export class AdminhomeComponent implements OnInit {
         console.log('Login user information = ', data);
       }
     });
-
-    this.userService.getUserBasedOnName('Admin5').subscribe((userdata: any) => {
-      console.log('Login data in login component == ', userdata);
-      if (userdata) {
-        this.loginUserData = userdata;
-        this.sharedService.setLoginUserInformation(this.loginUserData);
-      }
-    });
   }
 }

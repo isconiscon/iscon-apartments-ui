@@ -1,0 +1,66 @@
+.user-details-container {
+  position: relative;
+}
+.userDetailsForm {
+  font-size: 14px !important;
+  .legend-container {
+    border: 1px solid #ccc;
+    position: relative;
+    padding: 25px 10px 10px 10px;
+  }
+
+  .userdetailLegend {
+    position: absolute;
+    top: -22px;
+    background: #fff;
+    left: 5px;
+    width: auto;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .personalInfo-sec {
+    width: calc(100% - 200px);
+    padding: 10px;
+  }
+  .right-sec {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  .form-control {
+    &:focus {
+      border-color: #000 !important;
+      box-shadow: none !important;
+    }
+  }
+}
+.g-20 {
+  gap: 20px;
+}
+::ng-deep {
+  .userDetailsForm {
+    .p-dropdown {
+      height: calc(1.5em + 0.75rem + 2px);
+      width: 100% !important;
+    }
+  }
+  .p-dropdown:not(.p-disabled):hover {
+    border-color: #ced4da !important;
+  }
+  .p-dropdown:not(.p-disabled).p-focus {
+    border-color: #000 !important;
+    box-shadow: none !important;
+  }
+  .p-dropdown .p-dropdown-clear-icon {
+    font-size: 12px !important;
+    top: 1.4rem;
+  }
+}
+.profilepic-sec {
+  img {
+    width: 100%;
+    height: auto;
+    border: 1px solid grey;
+  }
+}

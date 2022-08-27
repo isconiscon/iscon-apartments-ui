@@ -1,6 +1,7 @@
+import { SharedService } from './../services/shared.service';
 import { UserService } from './../services/user.service';
 import { Injectable } from '@angular/core';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, ObservedValuesFromArray } from 'rxjs';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
@@ -12,11 +13,15 @@ import { environment } from '../../environments/environment';
 export class AuthService {
   private currentUserSubject: BehaviorSubject<any>;
   public currentUser: Observable<any>;
+  private _currentRole: BehaviorSubject<any>;
+  public currentRole$: Observable<any>;
+
   isLoggedIn: boolean = false;
   constructor(
     private router: Router,
     private http: HttpClient,
-    private userService: UserService
+    private userService: UserService,
+    private sharedService: SharedService
   ) {
     this.currentUserSubject = new BehaviorSubject<any>(
       localStorage.getItem('currentUser') || ''
@@ -32,15 +37,19 @@ export class AuthService {
       .pipe(
         map((user) => {
           this.isLoggedIn = true;
-          console.log('Authentication token from auth service == ', user);
           localStorage.setItem('auth_token', user.token);
           user.authdata = window.btoa(username + ':' + password);
-          localStorage.setItem('currentUser', JSON.stringify(user));
           this.currentUserSubject.next(user);
           this.userService
             .getUserBasedOnName(username)
             .subscribe((userdata: any) => {
-              console.log('User data in name method == ', userdata);
+              localStorage.setItem('currentUserRole', userdata.role);
+              localStorage.setItem(
+                'currentUser',
+                JSON.stringify(userdata.userName)
+              );
+              this.sharedService.setUserRole(userdata.role);
+              this.sharedService.setLoginUserInformation(userdata);
             });
 
           return user;

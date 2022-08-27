@@ -17,4 +17,9 @@ export class UserService {
     // return this.http.get<any>('../../assets/sampledata/getallusers.json');
     return this.http.get<any>(`${environment.apiUrl}/api/user/getAllUser`);
   }
+  deleteUser(userId: any) {
+    return this.http.delete<any>(
+      `${environment.apiUrl}/api/user/delete-user/${userId}`
+    );
+  }
 }

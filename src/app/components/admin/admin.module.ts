@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from '../../auth/token.interceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PrimengModule } from 'src/app/primeng.module';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+    PrimengModule,
     AdminRoutingModule,
   ],
   providers: [

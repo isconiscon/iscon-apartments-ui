@@ -17,16 +17,17 @@ export class TokenInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    const currentUser = this.authService.currentUserValue;
-    console.log('Auth toke in interceptor == ', currentUser);
+    // const currentUser = this.authService.currentUserValue;
+    const token = localStorage.getItem('auth_token');
+    console.log('Auth toke in interceptor == ', token);
     //Check for url. If it is login url then return
     if (request.url.includes('/login')) {
       return next.handle(request);
     }
-    if (currentUser && currentUser.token) {
+    if (token && token) {
       request = request.clone({
         setHeaders: {
-          Authorization: `${currentUser.token}`,
+          Authorization: `${token}`,
         },
       });
     }

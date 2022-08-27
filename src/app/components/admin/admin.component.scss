@@ -1,0 +1,48 @@
+.admin-content {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: #f1f1f1;
+  .admin-scroll-content {
+    overflow-y: auto;
+    height: 100vh;
+  }
+}
+.admin-sidenav-container {
+  height: 100vh;
+  background-color: #fff;
+}
+.admin-sidenav {
+  .nav-item {
+    padding: 10px 15px;
+    border-bottom: 2px solid grey;
+    cursor: pointer;
+    &:hover {
+      background-color: #f3f3f3;
+    }
+    .nav-link {
+      color: #000 !important;
+    }
+  }
+  .dropdown-toggle::after {
+    display: none !important;
+  }
+  .dropdown-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    margin: auto;
+  }
+  .dropdown-toggle {
+    &.show {
+      .user-icon {
+        color: red;
+      }
+    }
+  }
+}
+.active {
+  background-color: #f3f3f3;
+}

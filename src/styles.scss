@@ -1,14 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
-.main-container {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  right: 0;
-  overflow-y: auto;
-  height: calc(100% - 60px);
+.common-main {
+  &.main-container {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    // height: calc(100% - 60px);
+    // background-image: url("./assets/images/login-bg.jpg");
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    z-index: 100;
+  }
+}
+.landing-page {
+  .common-main {
+    &.main-container {
+      background-image: url("./assets/images/login-bg.jpg") !important;
+    }
+  }
 }
 .admin-body {
   .main-container {
     top: 0px !important;
   }
+}
+.admin {
+  &.landing-page {
+    .common-main {
+      &.main-container {
+        background-image: none !important;
+      }
+    }
+  }
+}
+
+.login {
+  &.landing-page {
+    .common-main {
+      &.main-container {
+        background-image: none !important;
+      }
+    }
+    .common-header {
+      background: none !important ;
+    }
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.b-right-1 {
+  border-right: 2px solid grey;
 }

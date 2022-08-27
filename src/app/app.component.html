@@ -1,4 +1,5 @@
-<div class="main-container">
+<app-commonheader *ngIf="!isAdmin"></app-commonheader>
+<div class="common-main main-container">
   <router-outlet></router-outlet>
   <!-- <router-outlet name="admin"></router-outlet> -->
 </div>

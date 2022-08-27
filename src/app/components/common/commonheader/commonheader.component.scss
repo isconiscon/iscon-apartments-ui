@@ -1,0 +1,32 @@
+@import "/src/variables.scss";
+.navbar-dark {
+  .navbar-nav {
+    .nav-link {
+      color: $white !important;
+    }
+  }
+}
+.common-header {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  //   .navbar-nav {
+  //     width: calc(100% - 120px) !important;
+  //   }
+  .nav-item {
+    padding: 0px 20px;
+  }
+}
+.common-logo {
+  img {
+    width: 110px;
+    height: auto;
+  }
+}
+.nav-link {
+  cursor: pointer;
+}

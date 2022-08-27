@@ -16,7 +16,7 @@
       </div>
       <div class="col col-xs-9 col-sm-9 col-md-9 col-lg-9">
         <div class="d-flex justify-content-end align-items-center">
-          <div class="loggeduser py-1 d-flex">
+          <div class="loggeduser py-1 d-flex pl-3">
             <div ngbDropdown>
               <button
                 class="btn btn-primary admin-dropdown-button flex-column"
@@ -34,8 +34,8 @@
                 </span>
               </button>
 
-              <div ngbDropdownMenu="gfg" class="dropdown-menu">
-                <button ngbDropdownItem>Profile</button>
+              <div ngbDropdownMenu="gfg" class="dropdown-menu box-arrow-top">
+                <button ngbDropdownItem (click)="editProfile()">Profile</button>
                 <button ngbDropdownItem>Settings</button>
                 <button ngbDropdownItem (click)="logout()">Logout</button>
               </div>
@@ -46,3 +46,18 @@
     </div>
   </div>
 </div>
+
+<p-dialog
+  [(visible)]="isProfileEdit"
+  class="userdetail col col-lg-6"
+  [modal]="true"
+  appendTo="body"
+>
+  <ng-template pTemplate="header">
+    <h4 class="userdetail-title">Profile Details</h4>
+  </ng-template>
+  <app-adminuserdetails
+    [userInformation]="profileData"
+    *ngIf="isProfileEdit"
+  ></app-adminuserdetails>
+</p-dialog>

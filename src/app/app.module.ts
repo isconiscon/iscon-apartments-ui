@@ -13,6 +13,11 @@ import { NotfoundComponent } from './components/common/notfound/notfound.compone
 
 import { TokenInterceptor } from './auth/token.interceptor';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { IndexhomeComponent } from './components/common/indexhome/indexhome.component';
+import { CommonheaderComponent } from './components/common/commonheader/commonheader.component';
+
+import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,6 +25,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     LoginComponent,
     NotfoundComponent,
+    IndexhomeComponent,
+    CommonheaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +35,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     ReactiveFormsModule,
     AdminModule,
+    MaterialModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
   ],
   providers: [

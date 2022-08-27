@@ -1,43 +1,55 @@
 <div class="login-container d-flex align-items-center justify-content-center">
-    <div class="login-wrapper d-flex align-items-center justify-content-center">
-      <div class="position-relative">
-        <h2 class="login-title text-center">Account Login</h2>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-          <div class="form-group">
-            <label for="username">Username</label>
+  <mat-card class="login-wrapper p-5">
+    <mat-card-title>
+      <img src="../../../../assets/images/login-img1.jpg" alt="" title="" />
+      <br />
+      Login to your ISCON</mat-card-title
+    >
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <p>
+          <mat-form-field>
             <input
               type="text"
+              matInput
+              placeholder="Username"
               formControlName="username"
-              class="form-control"
-              [ngClass]="{ 'is-invalid': submitted && f.username.errors }"
             />
-            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-              <div *ngIf="f.username.errors.required">Username is required</div>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="password">Password</label>
+            <mat-error *ngIf="f.username.errors?.required"
+              >Username is required</mat-error
+            >
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field>
             <input
               type="password"
+              matInput
+              placeholder="Password"
               formControlName="password"
-              class="form-control"
-              [ngClass]="{ 'is-invalid': submitted && f.password.errors }"
             />
-            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-              <div *ngIf="f.password.errors.required">Password is required</div>
-            </div>
-          </div>
-          <button [disabled]="loading" class="btn btn-primary">
-            <span
-              *ngIf="loading"
-              class="spinner-border spinner-border-sm mr-1"
-            ></span>
-            Login
-          </button>
-          <div *ngIf="error" class="alert alert-danger mt-3 mb-0">
-            {{ error }}
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+            <mat-error *ngIf="f.password.errors?.required"
+              >Password is required</mat-error
+            >
+          </mat-form-field>
+        </p>
+
+        <p>
+          <a href="javascript:void(0)" class="fp-link"
+            >Forget password?</a
+          >
+        </p>
+        <p *ngIf="error" class="error">
+          <mat-error>
+            {{ "Invalid username and password." }}
+          </mat-error>
+        </p>
+
+        <div class="button text-right">
+          <button type="submit" mat-raised-button color="primary">Login</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

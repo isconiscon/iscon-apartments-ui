@@ -17,10 +17,10 @@ export class LoginComponent implements OnInit {
   submitted = false;
   adminReturnUrl: string;
   userReturnUrl: string;
-  body: any;
   error = '';
   loginUserData: any;
   userRole: string;
+  body: any;
   constructor(
     private authService: AuthService,
     private router: Router,
@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.body = document.getElementsByTagName('body')[0];
-
+    this.body.classList.add('login');
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
       password: ['', Validators.required],
@@ -63,17 +63,19 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         (data) => {
-          this.userRole = localStorage.getItem('currentUserRole') || '';
-          console.log('User Role in login comp == ', this.userRole);
-          if (this.userRole === 'Admin') {
-            console.log('Im admin');
-            this.router.navigate([this.adminReturnUrl]);
-          } else {
-            console.log('Im not admin');
-            this.router.navigate([this.userReturnUrl]);
-          }
-          this.body.classList.add('body-landing');
-          // this.router.navigate([this.adminReturnUrl]);
+          this.userService
+            .getUserBasedOnName(this.f.username.value)
+            .subscribe((userdata: any) => {
+              console.log('get user data == ', userdata);
+              this.userRole = userdata.role;
+              if (this.userRole === 'Admin') {
+                console.log('Im admin');
+                this.router.navigate([this.adminReturnUrl]);
+              } else {
+                console.log('Im not admin');
+                this.router.navigate([this.userReturnUrl]);
+              }
+            });
         },
         (error) => {
           console.log('Error == ', error);

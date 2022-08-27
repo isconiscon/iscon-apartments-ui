@@ -1,0 +1,51 @@
+::ng-deep {
+  .p-datatable {
+    border-spacing: 0px;
+    table-layout: fixed;
+    width: 100%;
+    font-size: 13px;
+
+    th,
+    td {
+      min-width: 100px;
+      word-wrap: break-word; /*old browsers*/
+      overflow-wrap: break-word;
+    }
+  }
+  .userdetail {
+    .p-dialog {
+      width: 75% !important;
+    }
+    .p-dialog-header {
+      padding-bottom: 10px !important;
+    }
+    .p-dialog-content {
+      padding-top: 20px !important;
+    }
+  }
+  .p-dialog-header-icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #0069d9;
+    color: #fff !important;
+  }
+  .p-dialog .p-dialog-header .p-dialog-header-icon {
+    color: #fff !important;
+    &:enabled:hover {
+      background-color: transparent !important;
+      border: none !important;
+    }
+    &:focus {
+      background-color: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+  .p-dialog .p-dialog-content {
+    padding-top: 10px !important;
+  }
+}
+.rowaction {
+  color: #fff !important;
+}

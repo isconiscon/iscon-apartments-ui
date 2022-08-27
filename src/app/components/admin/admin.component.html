@@ -1,6 +1,6 @@
 <app-adminheader></app-adminheader>
 <div class="admin-content">
-  <div class="container-fluid">
+  <div class="container-fluid admin-scroll-content">
     <div class="row">
       <div
         class="col col-xs-3 col-sm-3 col-mg-3 col-lg-3 b-right-1 px-0 admin-sidenav-container"
@@ -8,25 +8,30 @@
         <!-- <app-adminsidenav></app-adminsidenav> -->
 
         <div class="admin-sidenav">
-          <nav class="navbar d-block">
+          <nav class="navbar d-block p-0">
             <ul class="nav navbar-nav">
-              <li class="nav-item">
-                <a href="#" [routerLink]="[{ outlets: { admin: ['dashboard'] } }]"
-                  >Home</a
-                >
+              <li
+                class="nav-item"
+                [routerLinkActive]="['active']"
+                [routerLink]="[{ outlets: { admin: ['dashboard'] } }]"
+              >
+                <i class="fa fa-home mr-1" aria-hidden="true"></i> Home
               </li>
-              <li class="nav-item">
-                <a
-                  href="#"
-                  [routerLink]="[{ outlets: { admin: ['allusers'] } }]"
-                  >All users</a
-                >
+              <li
+                class="nav-item"
+                [routerLinkActive]="['active']"
+                [routerLink]="[{ outlets: { admin: ['allusers'] } }]"
+              >
+                <i class="fa fa-user mr-1 user-icon" aria-hidden="true"></i> All
+                users
               </li>
             </ul>
           </nav>
         </div>
       </div>
-      <div class="col col-xs-9 col-sm-9 col-mg-9 col-lg-9 admin-main-container">
+      <div
+        class="col col-xs-9 col-sm-9 col-mg-9 col-lg-9 admin-main-container py-3"
+      >
         <!-- <app-adminhome></app-adminhome> -->
         <router-outlet name="admin"></router-outlet>
       </div>

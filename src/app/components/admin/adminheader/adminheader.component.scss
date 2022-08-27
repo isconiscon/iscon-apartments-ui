@@ -1,34 +1,49 @@
 .admin-header {
-    .dropdown-toggle::after {
-      display: none !important;
-    }
-    .admin-dropdown-button {
-      background: none !important;
-      color: grey;
-      border: none !important;
-      &:focus {
-        outline: none !important;
-        border: none !important;
-        box-shadow: none !important;
-      }
-    }
-    .userimage {
-      img {
-        width: 40px;
-        height: 40px;
-      }
-    }
-    .loggeduser {
-      border-left: 1px solid grey;
-    }
-    .dropdown-menu {
-      border-radius: 0px !important;
-      border: 0px !important;
-      box-shadow: 0px 2px 14px -4px rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 0px 2px 14px -4px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 0px 2px 14px -4px rgba(0, 0, 0, 0.75);
-      -ms-box-shadow: 0px 2px 14px -4px rgba(0, 0, 0, 0.75);
-      -o-box-shadow: 0px 2px 14px -4px rgba(0, 0, 0, 0.75);
-    }  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  .dropdown-toggle::after {
+    display: none !important;
   }
-  
+  .admin-dropdown-button {
+    background: none !important;
+    color: grey;
+    border: none !important;
+    &:focus {
+      outline: none !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+  }
+  .userimage {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  .loggeduser {
+    border-left: 1px solid grey;
+    position: relative;
+  }
+  .dropdown-menu {
+    border-radius: 0px !important;
+    border: 0px !important;
+    box-shadow: 0px 2px 14px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 2px 14px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 14px -4px rgba(0, 0, 0, 0.75);
+    -ms-box-shadow: 0px 2px 14px -4px rgba(0, 0, 0, 0.75);
+    -o-box-shadow: 0px 2px 14px -4px rgba(0, 0, 0, 0.75);
+    &.box-arrow-top:after {
+      content: " ";
+      position: absolute;
+      right: 22px;
+      top: -10px;
+      border-top: none;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
+      border-bottom: 10px solid white;
+    }
+  }
+}

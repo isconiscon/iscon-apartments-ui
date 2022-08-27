@@ -1,26 +1,281 @@
-<form>
-  <div class="form-group">
-    <label for="firstname">Firstname</label>
-    <input
-      type="text"
-      class="form-control"
-      id="firstname"
-      aria-describedby="firstname"
-      placeholder=""
-      [(ngModel)]="userInformation.firstName"
-      name="firstname"
-    />
-  </div>
-  <div class="form-group">
-    <label for="phone">Phone</label>
-    <input
-      type="text"
-      class="form-control"
-      id="phone"
-      placeholder=""
-      name="phone"
-      [(ngModel)]="userInformation.phone"
-    />
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<div class="user-details-container">
+  <form class="userDetailsForm">
+    <div
+      class="form-container d-flex mb-4 flex-row g-20 justify-content-between"
+    >
+      <div class="personalInfo-sec legend-container mb-2">
+        <legend class="userdetailLegend">Personal Information</legend>
+        <div class="row mb-3">
+          <div class="col col-xs-12 col-lg-4">
+            <label for="firstName">Firstname <span>*</span></label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              aria-describedby="firstName"
+              placeholder="Enter Firstname"
+              [(ngModel)]="userInformation.firstName"
+              name="firstname"
+            />
+          </div>
+          <div class="col col-xs-12 col-lg-4">
+            <label for="middleName">Middlename</label>
+            <input
+              type="text"
+              class="form-control"
+              id="middleName"
+              aria-describedby="middleName"
+              placeholder="Enter Middlename"
+              [(ngModel)]="userInformation.middleName"
+              name="middleName"
+            />
+          </div>
+          <div class="col col-xs-12 col-lg-4">
+            <label for="lastName">Lastname <span>*</span></label>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              aria-describedby="lastName"
+              placeholder="Enter Lastname"
+              [(ngModel)]="userInformation.lastName"
+              name="lastName"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col col-xs-12 col-lg-6">
+            <label for="userEmail">Email address<span>*</span></label>
+            <input
+              type="email"
+              class="form-control"
+              id="userEmail"
+              placeholder="Enter email"
+              [(ngModel)]="userInformation.email"
+              name="email"
+            />
+          </div>
+          <div class="col col-xs-12 col-lg-3">
+            <label for="userCountry">Country <span>*</span></label>
+            <p-dropdown
+              [options]="cities"
+              [(ngModel)]="userInformation.country"
+              placeholder="Select a City"
+              optionLabel="name"
+              [showClear]="true"
+              name="country"
+            ></p-dropdown>
+          </div>
+          <div class="col col-xs-12 col-lg-3">
+            <label for="userPhone">Phone<span>*</span></label>
+            <input
+              type="text"
+              class="form-control"
+              id="userPhone"
+              placeholder=""
+              [(ngModel)]="userInformation.phone"
+              name="phone"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col col-xs-12 col-lg-4">
+            <label for="userDob">Date of birth <span>*</span></label>
+            <input type="text" ngbDatepicker #d="ngbDatepicker" />
+          </div>
+          <div class="col col-xs-12 col-lg-4">
+            <label for="userGender">Gender <span>*</span></label>
+            <p-dropdown
+              [options]="cities"
+              [(ngModel)]="userInformation.country"
+              placeholder="Select a City"
+              optionLabel="name"
+              [showClear]="true"
+              name="gender"
+            ></p-dropdown>
+          </div>
+          <div class="col col-xs-12 col-lg-4">
+            <label for="userMaritalStatus">Marital Status <span>*</span></label>
+            <p-dropdown
+              [options]="cities"
+              [(ngModel)]="userInformation.country"
+              placeholder="Select a City"
+              optionLabel="name"
+              [showClear]="true"
+              name="maritalStatus"
+            ></p-dropdown>
+          </div>
+        </div>
+      </div>
+      <div class="right-sec mb-2">
+        <div class="profilepic-sec w-100">
+          <img
+            src="../../../../../assets/images/user-dummy.jpg"
+            title=""
+            alt=""
+            class="mb-2"
+          />
+          <button class="btn btn-primary w-100 mb-3">Change Photo</button>
+        </div>
+        <div class="role-sec w-100">
+          <p-dropdown
+            [options]="cities"
+            [(ngModel)]="userInformation.country"
+            placeholder="Select a City"
+            optionLabel="name"
+            [showClear]="true"
+            name="maritalStatus"
+          ></p-dropdown>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col col-lg-6">
+        <div class="address-part legend-container">
+          <legend class="userdetailLegend">Billing Address</legend>
+          <div class="row mb-3">
+            <div class="col col-lg-12">
+              <label for="addressLine1">Address Line1 <span>*</span></label>
+              <input
+                type="text"
+                class="form-control"
+                id="addressLine1"
+                aria-describedby="addressLine1"
+                placeholder="Enter addressLine1"
+                name="addressLine1"
+              />
+            </div>
+            <div class="col col-lg-12">
+              <label for="addressLine2">Address Line2 <span>*</span></label>
+              <input
+                type="text"
+                class="form-control"
+                id="addressLine2"
+                aria-describedby="addressLine2"
+                placeholder="Enter addressLine2"
+                name="addressLine2"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col col-lg-6">
+              <label for="city">City <span>*</span></label>
+              <p-dropdown
+                [options]="cities"
+                placeholder="Select a City"
+                optionLabel="name"
+                [showClear]="true"
+                name="city"
+              ></p-dropdown>
+            </div>
+            <div class="col col-lg-6">
+              <label for="state">State <span>*</span></label>
+              <p-dropdown
+                [options]="cities"
+                placeholder="Select a City"
+                optionLabel="name"
+                [showClear]="true"
+                name="state"
+              ></p-dropdown>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col col-lg-6">
+              <label for="postalZip">Postal / Zip code <span>*</span></label>
+              <input
+                type="text"
+                class="form-control"
+                id="postalZip"
+                aria-describedby="postalZip"
+                placeholder="Enter postalZip"
+                name="postalZip"
+              />
+            </div>
+            <div class="col col-lg">
+              <label>&nbsp;</label>
+              <div class="p-field-checkbox">
+                <p-checkbox
+                  [(ngModel)]="checked"
+                  inputId="isSame"
+                  name="sameBilling"
+                ></p-checkbox>
+                <label for="isSame" class="mb-0 ml-1"
+                  >Same address for Shipping</label
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col col-lg-6">
+        <div class="address-part legend-container">
+          <legend class="userdetailLegend">Shipping Address</legend>
+          <div class="row mb-3">
+            <div class="col col-lg-12">
+              <label for="addressLine1">Address Line1 <span>*</span></label>
+              <input
+                type="text"
+                class="form-control"
+                id="addressLine1"
+                aria-describedby="addressLine1"
+                placeholder="Enter addressLine1"
+                name="addressLine1"
+              />
+            </div>
+            <div class="col col-lg-12">
+              <label for="addressLine2">Address Line2 <span>*</span></label>
+              <input
+                type="text"
+                class="form-control"
+                id="addressLine2"
+                aria-describedby="addressLine2"
+                placeholder="Enter addressLine2"
+                name="addressLine2"
+              />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col col-lg-6">
+              <label for="city">City <span>*</span></label>
+              <p-dropdown
+                [options]="cities"
+                placeholder="Select a City"
+                optionLabel="name"
+                [showClear]="true"
+                name="city"
+              ></p-dropdown>
+            </div>
+            <div class="col col-lg-6">
+              <label for="state">State <span>*</span></label>
+              <p-dropdown
+                [options]="cities"
+                placeholder="Select a City"
+                optionLabel="name"
+                [showClear]="true"
+                name="state"
+              ></p-dropdown>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col col-lg-6">
+              <label for="postalZip">Postal / Zip code <span>*</span></label>
+              <input
+                type="text"
+                class="form-control"
+                id="postalZip"
+                aria-describedby="postalZip"
+                placeholder="Enter postalZip"
+                name="postalZip"
+              />
+            </div>
+            <div class="col col-lg">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-right">
+      <button type="submit" class="btn btn-primary text-right">Save</button>
+    </div>
+  </form>
+</div>
